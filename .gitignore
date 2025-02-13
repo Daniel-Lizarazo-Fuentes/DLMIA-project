@@ -1,5 +1,8 @@
 # Project specific stuff
 ASOCA
+nnUNet_raw/*
+nnUNet_results/*
+nnUNet_preprocessed/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
