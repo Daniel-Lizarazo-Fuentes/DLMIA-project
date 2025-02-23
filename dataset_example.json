@@ -1,0 +1,13 @@
+{
+    "channel_names": {
+      "0": "CT"
+    },
+  
+    "labels": {
+      "background": 0,
+      "CA": 1
+    },
+    
+    "numTraining": 20, 
+    "file_ending": ".nrrd"
+  }

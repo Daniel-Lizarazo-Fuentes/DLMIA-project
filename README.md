@@ -76,7 +76,8 @@ As the annotations is volume data without labels we need to tell nnUNet what is 
 - Mac: [mac store](https://apps.apple.com/app/eduvpn-client/id1317704208)
 
 # Running nnUNet
-1. ```nnUNetv2_plan_and_preprocess -d DATASET_ID --verify_dataset_integrity -np 1``` (DATASET_ID can be 100 or 200)
+1. ```nnUNetv2_plan_and_preprocess -d DATASET_ID --verify_dataset_integrity -np 1``` (DATASET_ID can be 100 or 200) <br>
+This will produce a ```Dataset{dataset name}``` directory with the dataset fingerprint (fixed) and the rule based params. 
 2. ``````
 
 
