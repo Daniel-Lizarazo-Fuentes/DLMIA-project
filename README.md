@@ -34,7 +34,7 @@ Then tell jupyter to connect to an existing Jupyter Server and enter the followi
 ### GUI
 In vscode install the python/jupyter extensions. Press kernels in the top right (if a .ipynb file is opened). Then press existing Jupyter Server and then enter the url. 
 
-<i>If you are running an open source vscode package include ```--enable-proposed-api ms-toolsai.jupyter``` to save a lot of pain (kernels not appearing in GUI etc).</i>
+<i style="color: red">If you are running an open source vscode package include ```--enable-proposed-api ms-toolsai.jupyter``` to save a lot of pain (kernels not appearing in GUI etc).</i>
 
 ## Additional setup
 ### nnUNet
@@ -65,7 +65,7 @@ First create the 3 required folders (preprocess,raw,results). In the case that y
 
 **Windows (local)**
 1. Run ```paths.bat``` in the terminal (powershell or cmd, as long as it's administrator)
-2. Resart all shells and check if present: ```echo $env:nnUNet_raw``` for example 
+2. Restart all shells and check if present: ```echo $env:nnUNet_raw``` for example 
 
 #### Processing lables
 As the annotations is volume data without labels we need to tell nnUNet what is background and what are the proper points. TODO
@@ -76,7 +76,9 @@ As the annotations is volume data without labels we need to tell nnUNet what is 
 - Mac: [mac store](https://apps.apple.com/app/eduvpn-client/id1317704208)
 
 # Running nnUNet
-1. ```nnUNetv2_plan_and_preprocess -d DATASET_ID --verify_dataset_integrity -np 1``` (DATASET_ID can be 100 or 200) <br>
+<bold style="color:red">Very important! If running on the hub then include .local/bin/ before any commands. Otherwise things will break. This step is not necessary on windows.</bold>
+
+1. ```{.local/bin/}nnUNetv2_plan_and_preprocess -d {DATASET_ID} --verify_dataset_integrity -np 1``` (DATASET_ID can be 100 or 200) <br>
 This will produce a ```Dataset{dataset name}``` directory with the dataset fingerprint (fixed) and the rule based params. 
 2. ``````
 

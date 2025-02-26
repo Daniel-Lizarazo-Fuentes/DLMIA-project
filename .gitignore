@@ -3,6 +3,7 @@ ASOCA
 nnUNet_raw/*
 nnUNet_results/*
 nnUNet_preprocessed/*
+nnUNet_raw.zip
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
