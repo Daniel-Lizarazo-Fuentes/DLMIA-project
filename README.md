@@ -78,6 +78,8 @@ As the annotations is volume data without labels we need to tell nnUNet what is 
 # Running nnUNet
 <bold style="color:red">Very important! If running on the hub then include .local/bin/ before any commands. Otherwise things will break. This step is not necessary on windows.</bold>
 
+Note that the commands are also included ina runnable notebook file (````pipeline.ipynb```)
+
 1. ```{.local/bin/}nnUNetv2_plan_and_preprocess -d {DATASET_ID} --verify_dataset_integrity -np 1``` (DATASET_ID can be 100 or 200) <br>
 This will produce a ```Dataset{dataset name}``` directory with the dataset fingerprint (fixed) and the rule based params. 
 2. ``````
