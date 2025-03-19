@@ -76,7 +76,7 @@ As the annotations is volume data without labels we need to tell nnUNet what is 
 - Mac: [mac store](https://apps.apple.com/app/eduvpn-client/id1317704208)
 
 # Running nnUNet
-<bold style="color:red">Very important! If running on the hub then include .local/bin/ before any commands. Otherwise things will break. This step is not necessary on windows.</bold>
+<bold style="color:red">Very important! Sometimes the hub cannot find the command, use .local/bin/ before any commands to fix this.  This step should not be necessary when running locally. Additionally watch cluster usage to not eat up too many resources: ```watch -n1 nvidia-smi```</bold>
 
 Note that the commands are also included ina runnable notebook file (````pipeline.ipynb```)
 
