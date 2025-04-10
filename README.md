@@ -68,7 +68,7 @@ First create the 3 required folders (preprocess,raw,results). In the case that y
 2. Restart all shells and check if present: ```echo $env:nnUNet_raw``` for example 
 
 #### Processing lables
-As the annotations is volume data without labels we need to tell nnUNet what is background and what are the proper points. TODO
+As the annotations is volume data without labels we need to tell nnUNet what is background and what are the proper points. This is done though a small descripte file ```dataset.json``` which defines channels and provides information to nnUNet about the dataset. 
 
 ### Eduvpn
 - Linux: [install docs](https://docs.eduvpn.org/client/linux/installation.html)
@@ -78,10 +78,13 @@ As the annotations is volume data without labels we need to tell nnUNet what is 
 # Running nnUNet
 <bold style="color:red">Very important! Sometimes the hub cannot find the command, use .local/bin/ before any commands to fix this.  This step should not be necessary when running locally. Additionally watch cluster usage to not eat up too many resources: ```watch -n1 nvidia-smi```</bold>
 
-Note that the commands are also included ina runnable notebook file (````pipeline.ipynb```)
+The specifc commands are included (with additional documentation) in runnable notebook file (````pipeline.ipynb```).
 
-1. ```{.local/bin/}nnUNetv2_plan_and_preprocess -d {DATASET_ID} --verify_dataset_integrity -np 1``` (DATASET_ID can be 100 or 200) <br>
-This will produce a ```Dataset{dataset name}``` directory with the dataset fingerprint (fixed) and the rule based params. 
-2. ``````
+In short:
+1. Preprocessing
+2. Training (2d, 3d low/full, 3d cascade)
+3. Inference (2d, 3d low/full, 3d cascade)
+4. Ensemble 
 
+# Running Auto3dseg
 
