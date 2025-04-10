@@ -6,6 +6,11 @@ nnUNet_preprocessed/*
 nnUNet_raw.zip
 forDLMIA
 ASOCA_secret.zip
+inferences
+labelsTs
+Results
+*.nrrd
+*.nii.gz
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
