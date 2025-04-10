@@ -4,7 +4,6 @@ import nrrd
 import time
 
 def convert_nifti_to_nrrd(nifti_path, nrrd_path):
-    """Convert a single .nii.gz file to .nrrd format."""
     print(f"Processing: {nifti_path}")
     start_time = time.time()
 
@@ -25,7 +24,6 @@ def convert_nifti_to_nrrd(nifti_path, nrrd_path):
     print(f"✅ Saved: {nrrd_path} ({time.time() - start_time:.2f}s)")
 
 def batch_convert_nifti_to_nrrd(input_folder, output_folder):
-    """Convert all .nii.gz files in a folder to .nrrd format."""
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
 
