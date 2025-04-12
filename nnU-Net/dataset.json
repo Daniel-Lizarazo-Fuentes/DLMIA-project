@@ -8,6 +8,6 @@
       "CA": 1
     },
     
-    "numTraining": 20, 
+    "numTraining": 32, 
     "file_ending": ".nrrd"
   }
