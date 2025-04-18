@@ -1,13 +1,25 @@
 import os
-image = False
-folder_path = "nnUNet_raw/Dataset200_diseased/labelsTr"
+image = True
+prefix = "AUG"
+folder_path = "/home/jovyan/nnU-Net/nnUNet_raw/Dataset500_augmented/imagesTr"
 
 for filename in os.listdir(folder_path):
     parts = filename.split("_")
-    secondary = parts[1].split(".")
-    secondary[0] = "0"+secondary[0] if int(secondary[0])>9 else str("00"+secondary[0])
-    new_name = f"{parts[0].upper()}_{secondary[0]}"
-    new_name = f"{new_name}_0000.{secondary[1]}" if image else f"{new_name}.{secondary[1]}"
+    numeric_part = None
+    for part in parts:
+        if part.isnumeric(): 
+            numeric_part = part
+
+    type = ".nrrd"
+    if filename.endswith(".nii.gz"):
+        type = ".nii.gz"
+        continue  
+    new_name = f"{prefix}_{numeric_part}"
+
+    if image:
+        new_name += "_0000"+type
+    else:
+        new_name += type
 
     old_path = os.path.join(folder_path, filename)
     new_path = os.path.join(folder_path, new_name)
